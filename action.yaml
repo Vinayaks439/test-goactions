@@ -1,0 +1,12 @@
+name: "test-goactions"
+description: "test-goactions"
+inputs:
+  name:
+    description: "args"
+    required: true
+    default: "test"
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - "-name=${{ inputs.args }}"
