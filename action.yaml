@@ -9,7 +9,8 @@ runs:
   using: docker
   image: Dockerfile
   args:
-  - "-name=${{ inputs.name }}"
+  - "--name=${{ inputs.name }}"
+  - "test --name=${{ inputs.name }}"
 branding:
     color: "blue"
     icon: "code"
