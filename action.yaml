@@ -10,3 +10,6 @@ runs:
   image: Dockerfile
   args:
   - "-name=${{ inputs.args }}"
+branding:
+    color: "blue"
+    icon: "code"
