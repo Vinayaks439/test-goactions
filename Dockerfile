@@ -1,5 +1,4 @@
-FROM golang:1.14.2-alpine3.11
-RUN apk add git
+FROM golang:1.21
 
 COPY . /home/src
 WORKDIR /home/src
