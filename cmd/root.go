@@ -11,6 +11,8 @@ import (
 )
 
 var name string
+var favColor string
+var song string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -25,7 +27,9 @@ to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("Hello from github actions, %s\n", name)
+		fmt.Println("Hello from github actions", name)
+		fmt.Println("Your favorite color is", favColor)
+		fmt.Println("Your favorite song is", song)
 	},
 }
 
@@ -49,4 +53,6 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	rootCmd.Flags().StringVarP(&name, "name", "n", "", "Name of the person")
+	rootCmd.Flags().StringVarP(&favColor, "favColor", "c", "", "Favorite color of the person")
+	rootCmd.Flags().StringVarP(&song, "song", "s", "", "Favorite song of the person")
 }

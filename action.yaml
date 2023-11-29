@@ -5,12 +5,21 @@ inputs:
     description: "args"
     required: true
     default: "test"
+  favcolor:
+    description: "args"
+    required: true
+    default: "test"
+  song:
+    description: "args"
+    required: true
+    default: "test"
 runs:
   using: docker
   image: Dockerfile
   args:
   - "--name=${{ inputs.name }}"
-  - "test --name=${{ inputs.name }}"
+  - "--favColor=${{ inputs.favcolor }}"
+  - "--song=${{ inputs.song }}"
 branding:
     color: "blue"
     icon: "code"
