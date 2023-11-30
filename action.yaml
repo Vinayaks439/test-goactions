@@ -9,7 +9,11 @@ inputs:
     description: "args"
     required: true
     default: "test"
-  flags:
+  name:
+    description: "args"
+    required: true
+    default: "test"
+  age:
     description: "args"
     required: true
     default: "test"
@@ -19,7 +23,8 @@ runs:
   args:
   - "${{ inputs.command }}"
   - "${{ inputs.action }}"
-  - "${{ inputs.flags }}"
+  - "--name=${{ inputs.name }}"
+  - "--age=${{ inputs.age }}"
 branding:
     color: "blue"
     icon: "code"
