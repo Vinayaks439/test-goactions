@@ -1,15 +1,15 @@
 name: "test-goactions"
 description: "test-goactions"
 inputs:
-  name:
+  command:
     description: "args"
     required: true
     default: "test"
-  favcolor:
+  action:
     description: "args"
     required: true
     default: "test"
-  song:
+  flags:
     description: "args"
     required: true
     default: "test"
@@ -17,9 +17,9 @@ runs:
   using: docker
   image: Dockerfile
   args:
-  - "--name=${{ inputs.name }}"
-  - "--favColor=${{ inputs.favcolor }}"
-  - "--song=${{ inputs.song }}"
+  - "${{ inputs.command }}"
+  - "${{ inputs.action }}"
+  - "${{ inputs.flags }}"
 branding:
     color: "blue"
     icon: "code"
